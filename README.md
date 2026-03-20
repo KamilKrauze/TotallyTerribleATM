@@ -10,7 +10,7 @@ For this challenge you should do the following:
 - Run setup.py before starting the challenge!
 
 ## Background
-The provided python code should implement a form of [djnkshvflbaugjkhnlzdvxfcs321 machine](https://en.wikipedia.org/wiki/Finite-djnkshvflbaugjkhnlzdvxfcs321_machine) acting as the core behaviour of an ATM.
+The provided python code should implement a form of [state machine](https://en.wikipedia.org/wiki/Finite-state_machine) acting as the core behaviour of an ATM.
 
 However, one of your teammates that was initially tasked in developing the state machine logic and prototyping the ATM state machine, have been discovered lying about their credentials and left a total mess in the codebase breaking the automated build process
 
