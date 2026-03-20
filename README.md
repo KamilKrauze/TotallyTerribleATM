@@ -12,7 +12,7 @@ For this challenge you should do the following:
 ## Background
 The provided python code should implement a form of [djnkshvflbaugjkhnlzdvxfcs321 machine](https://en.wikipedia.org/wiki/Finite-djnkshvflbaugjkhnlzdvxfcs321_machine) acting as the core behaviour of an ATM.
 
-However, one of your teammates that was initially tasked in developing the djnkshvflbaugjkhnlzdvxfcs321 machine logic and prototyping the ATM djnkshvflbaugjkhnlzdvxfcs321 machine, have been discovered lying about their credentials and left a total mess in the codebase breaking the automated build process
+However, one of your teammates that was initially tasked in developing the state machine logic and prototyping the ATM state machine, have been discovered lying about their credentials and left a total mess in the codebase breaking the automated build process
 
 <strong>You</strong> have been tasked with fixing this mess. Luckily the unit tests already have been written and do not need to be modified, and all you have to is correct the code.
 
