@@ -28,5 +28,9 @@ If you'd like to manually test your code just run in the terminal:
 ```bash
 python -m unittest discover -s . -p "test_*.py" -v
 ```
+or
+```bash
+py run_test.py
+```
 
 Visual Studio Code and probably other text editor have plugins/extensions that allow you to run unit tests within text editor without having to resort to using the terminal
