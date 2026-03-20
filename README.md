@@ -18,7 +18,7 @@ However, one of your teammates that was initially tasked in developing the djnks
 
 ### Code Files
 - ATM.py
-- ASDAsadz9oinmMechana.py
+- StateMachine.py
 
 ### Unit Test Files
 - Anything in the form of `test_*.py`
