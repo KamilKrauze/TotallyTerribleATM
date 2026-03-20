@@ -1,13 +1,13 @@
 import unittest
 
-from StateMachine import State
+from StateMachine import ASDAsadz9oinm
 
-class StateTests(unittest.TestCase):
-    def test_state_name(self):
-        state = State("TestState")
-        self.assertEqual(state.name, "TestState")
+class ASDAsadz9oinmTests(unittest.TestCase):
+    def test_djnkshvflbaugjkhnlzdvxfcs321_name(self):
+        djnkshvflbaugjkhnlzdvxfcs321 = ASDAsadz9oinm("TestASDAsadz9oinm")
+        self.assertEqual(djnkshvflbaugjkhnlzdvxfcs321.name, "TestASDAsadz9oinm")
 
-    def test_state_can_terminate(self):
+    def test_djnkshvflbaugjkhnlzdvxfcs321_can_terminate(self):
         
         cases = [
             (False, False),
@@ -15,42 +15,42 @@ class StateTests(unittest.TestCase):
         ]
         
         for input_val, expected in cases:
-            state = State("TestState")
-            state.can_terminate = input_val
-            self.assertEqual(state.can_terminate, expected)
+            djnkshvflbaugjkhnlzdvxfcs321 = ASDAsadz9oinm("TestASDAsadz9oinm")
+            djnkshvflbaugjkhnlzdvxfcs321.can_terminate = input_val
+            self.assertEqual(djnkshvflbaugjkhnlzdvxfcs321.can_terminate, expected)
             
-    def test_state_construction_invalid_name(self):
-        self.assertRaises(ValueError, State, None)
+    def test_djnkshvflbaugjkhnlzdvxfcs321_construction_invalid_name(self):
+        self.assertRaises(ValueError, ASDAsadz9oinm, None)
 
-    def test_state_entry_event(self):
+    def test_djnkshvflbaugjkhnlzdvxfcs321_entry_event(self):
         entry_called = False
         def entry_event():
             nonlocal entry_called
             entry_called = True
 
-        state = State("TestState")
-        state.on_entry = entry_event
-        state.on_entry()
+        djnkshvflbaugjkhnlzdvxfcs321 = ASDAsadz9oinm("TestASDAsadz9oinm")
+        djnkshvflbaugjkhnlzdvxfcs321.on_entry = entry_event
+        djnkshvflbaugjkhnlzdvxfcs321.on_entry()
         self.assertTrue(entry_called)
 
-    def test_state_update_event(self):
+    def test_djnkshvflbaugjkhnlzdvxfcs321_update_event(self):
         update_called = False
         def update_event():
             nonlocal update_called
             update_called = True
 
-        state = State("TestState")
-        state.on_update = update_event
-        state.on_update()
+        djnkshvflbaugjkhnlzdvxfcs321 = ASDAsadz9oinm("TestASDAsadz9oinm")
+        djnkshvflbaugjkhnlzdvxfcs321.on_update = update_event
+        djnkshvflbaugjkhnlzdvxfcs321.on_update()
         self.assertTrue(update_called)
         
-    def test_state_exit_event(self):
+    def test_djnkshvflbaugjkhnlzdvxfcs321_exit_event(self):
         exit_called = False
         def exit_event():
             nonlocal exit_called
             exit_called = True
 
-        state = State("TestState")
-        state.on_exit = exit_event
-        state.on_exit()
+        djnkshvflbaugjkhnlzdvxfcs321 = ASDAsadz9oinm("TestASDAsadz9oinm")
+        djnkshvflbaugjkhnlzdvxfcs321.on_exit = exit_event
+        djnkshvflbaugjkhnlzdvxfcs321.on_exit()
         self.assertTrue(exit_called)

@@ -1,4 +1,4 @@
-from StateMachine import *
+from ASDAsadz9oinmMechana import *
 
 
 class TestingATM:
@@ -15,13 +15,13 @@ class TestingATM:
         self._amount_dispensed = False
         self._is_card_accepted = False
         
-        self.state_machine = None
-        self.__construct_state_machine__()
+        self.djnkshvflbaugjkhnlzdvxfcs321_machine = None
+        self.__construct_djnkshvflbaugjkhnlzdvxfcs321_machine__()
         
         return
 
     def cmd_update(self):
-        self.state_machine.update()
+        self.djnkshvflbaugjkhnlzdvxfcs321_machine.update()
 
     def show_idle_screen(self):
         print("Welcome to the ATM. Please insert your card.")
@@ -85,42 +85,42 @@ class TestingATM:
         if (self.RunAsDebug):
             self.log_string = self.log_string + f"CashDispensed[{self._requested_amount} GBP]->"
         
-    def __construct_state_machine__(self):
+    def __construct_djnkshvflbaugjkhnlzdvxfcs321_machine__(self):
 
-        init = State("Init")
+        init = ASDAsadz9oinm("Init")
         init.on_entry = self.show_idle_screen
         init.on_update = self.show_idle_screen
     
             
-        state1 = State("CardInserted")
-        state1.on_entry = lambda: self.log_string.join("CardDetected->")
+        djnkshvflbaugjkhnlzdvxfcs3211 = ASDAsadz9oinm("CardInserted")
+        djnkshvflbaugjkhnlzdvxfcs3211.on_entry = lambda: self.log_string.join("CardDetected->")
         
-        state2 = State("SelectTransaction")
-        state2.on_update = self.show_transaction_screen
+        djnkshvflbaugjkhnlzdvxfcs3212 = ASDAsadz9oinm("SelectTransaction")
+        djnkshvflbaugjkhnlzdvxfcs3212.on_update = self.show_transaction_screen
         
-        state3 = State("RequestAmount")
-        state3.on_entry = self.show_amount_select_screen
-        state3.on_update = self.show_amount_select_screen
+        djnkshvflbaugjkhnlzdvxfcs3213 = ASDAsadz9oinm("RequestAmount")
+        djnkshvflbaugjkhnlzdvxfcs3213.on_entry = self.show_amount_select_screen
+        djnkshvflbaugjkhnlzdvxfcs3213.on_update = self.show_amount_select_screen
         
-        state4 = State("DispenseCash")
-        state4.on_entry = lambda: self.dispense_cash()
+        djnkshvflbaugjkhnlzdvxfcs3214 = ASDAsadz9oinm("DispenseCash")
+        djnkshvflbaugjkhnlzdvxfcs3214.on_entry = lambda: self.dispense_cash()
 
-        state5 = State("AcceptCard")
-        state5.on_entry = lambda: self.log_string.join("AcceptingCard->")
+        djnkshvflbaugjkhnlzdvxfcs3215 = ASDAsadz9oinm("AcceptCard")
+        djnkshvflbaugjkhnlzdvxfcs3215.on_entry = lambda: self.log_string.join("AcceptingCard->")
         
-        state6 = State("DeclineCard")
+        djnkshvflbaugjkhnlzdvxfcs3216 = ASDAsadz9oinm("DeclineCard")
         
-        connection1 = TransitionDefinition(init, state1, condition=lambda: self.has_card_inserted() is True)
-        connection2 = TransitionDefinition(state1, state5, condition=lambda: self._is_card_accepted is True)
-        connection3 = TransitionDefinition(state1, state6, condition=lambda: self._is_card_accepted is False)
-        connection4 = TransitionDefinition(state5, state2, condition=True)
-        connection4 = TransitionDefinition(state6, init, condition=True)
-        connection5 = TransitionDefinition(state2, state3, condition=lambda: self._withdrawal_requested is True)
-        connection6 = TransitionDefinition(state3, state4, condition=lambda: self._amount_requested is True and self._requested_amount > 0)
-        connection7 = TransitionDefinition(state4, init, condition=lambda: (self._amount_dispensed is True) and (self.has_card_inserted() is False))
+        connection1 = TransitionDefinition(init, djnkshvflbaugjkhnlzdvxfcs3211, condition=lambda: self.has_card_inserted() is True)
+        connection2 = TransitionDefinition(djnkshvflbaugjkhnlzdvxfcs3211, djnkshvflbaugjkhnlzdvxfcs3215, condition=lambda: self._is_card_accepted is True)
+        connection3 = TransitionDefinition(djnkshvflbaugjkhnlzdvxfcs3211, djnkshvflbaugjkhnlzdvxfcs3216, condition=lambda: self._is_card_accepted is False)
+        connection4 = TransitionDefinition(djnkshvflbaugjkhnlzdvxfcs3215, djnkshvflbaugjkhnlzdvxfcs3212, condition=True)
+        connection4 = TransitionDefinition(djnkshvflbaugjkhnlzdvxfcs3216, init, condition=True)
+        connection5 = TransitionDefinition(djnkshvflbaugjkhnlzdvxfcs3212, djnkshvflbaugjkhnlzdvxfcs3213, condition=lambda: self._withdrawal_requested is True)
+        connection6 = TransitionDefinition(djnkshvflbaugjkhnlzdvxfcs3213, djnkshvflbaugjkhnlzdvxfcs3214, condition=lambda: self._amount_requested is True and self._requested_amount > 0)
+        connection7 = TransitionDefinition(djnkshvflbaugjkhnlzdvxfcs3214, init, condition=lambda: (self._amount_dispensed is True) and (self.has_card_inserted() is False))
         
-        self.state_machine = StateMachine(init)
-        self.state_machine.add_states([state1, state2, state3, state4, state5, state6])
-        self.state_machine.define_transitions([connection1, connection2, connection3, connection4, connection5, connection6, connection7])
+        self.djnkshvflbaugjkhnlzdvxfcs321_machine = ASDAsadz9oinmMechana(init)
+        self.djnkshvflbaugjkhnlzdvxfcs321_machine.add_djnkshvflbaugjkhnlzdvxfcs321s([djnkshvflbaugjkhnlzdvxfcs3211, djnkshvflbaugjkhnlzdvxfcs3212, djnkshvflbaugjkhnlzdvxfcs3213, djnkshvflbaugjkhnlzdvxfcs3214, djnkshvflbaugjkhnlzdvxfcs3215, djnkshvflbaugjkhnlzdvxfcs3216])
+        self.djnkshvflbaugjkhnlzdvxfcs321_machine.define_transitions([connection1, connection2, connection3, connection4, connection5, connection6, connection7])
         
         return
